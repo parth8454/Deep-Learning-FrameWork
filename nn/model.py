@@ -8,8 +8,13 @@ class Neuron:
 
     def __call__(self,x):
         activation = sum((wi*xi for wi,xi in zip(self.w,x)),self.b) 
-        return activation   
+        return activation 
     
+    def parameters(self):
+        return self.w + [self.b]
+    # list concatenation
+    
+
 class Layer:
 
     def __init__(self,nin,nout):
@@ -19,6 +24,9 @@ class Layer:
         outs = [n(x) for n in self.neurons]
         return outs[0] if len(outs) == 1 else outs
     
+    def parameters(self):
+        return [p for neuron in self.neurons for p in neuron.parameters()]
+
 class MLP:
 
     def __init__(self,nin,nouts): 
@@ -32,3 +40,6 @@ class MLP:
         for layer in self.layers:
             x = layer(x)
         return x
+    
+    def parameters(self):
+        return [p for layer in self.layers for p in layer.parameters()]
