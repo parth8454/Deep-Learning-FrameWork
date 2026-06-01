@@ -1,7 +1,5 @@
-import maths
-
 class Value:
-  
+
   def __init__(self,data,_children=(),_op=''):
     self.data = data
     self.grad = 0.0
