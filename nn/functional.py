@@ -1,4 +1,5 @@
 import math
+import random
 from engine.value import Value
 
 def relu(x):
@@ -14,7 +15,18 @@ def relu(x):
     out._backward = _backward
     return out
 
+def leaky_relu(x, alpha=0.1):
+    assert isinstance(x, Value)
+    
+    val = x.data if x.data > 0 else alpha * x.data
+    out = Value(val, (x,), 'Leaky_ReLU')
 
+    def _backward():
+        dx = 1.0 if x.data > 0 else alpha
+        x.grad += dx * out.grad
+        
+    out._backward = _backward
+    return out
 
 
 def tanh(x):
@@ -30,3 +42,14 @@ def tanh(x):
 
     out._backward = _backward
     return out
+
+
+def dropout(x_list, p=0.5, training=True):
+    if not training or p == 0.0:
+        return x_list
+        
+    keep_prob = 1.0 - p
+    
+    mask = [1 if random.random() < keep_prob else 0 for _ in x_list]
+    
+    return [out * (m / keep_prob) for out, m in zip(x_list, mask)]
