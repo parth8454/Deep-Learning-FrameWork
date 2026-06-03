@@ -85,7 +85,7 @@ class Value:
 
 To make `Value` objects behave like normal numbers, we use Python's "magic methods" to intercept standard math operators. When you write `a + b`, Python calls `a.__add__(b)`.
 
-Instead of just returning the sum, our custom `__add__` method creates a brand new `Value` object, links `a` and `b` as its parents, and defines exactly how to calculate the local derivative for addition.
+Instead of just returning the sum, our custom `__add__` method creates a brand new `Value` object, links `a` and `b` as its parents, and defines exactly how to calculate the local derivative for addition
 
 ```python
 def __add__(self, other):
