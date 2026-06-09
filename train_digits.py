@@ -39,7 +39,7 @@ def train_mnist():
 
     print(f"Network has {len(nn.parameters())} total trainable parameters.")
 
-    epochs = 20
+    epochs = 18
 
     for k in range(epochs):
         ypred_train = [nn(x) for x in X_train]
