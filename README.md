@@ -1,7 +1,7 @@
 # Deep-Neural 🧠
 
 Welcome everyone! If you have ever looked at massive deep learning frameworks like PyTorch or TensorFlow and wondered what is actually happening inside that black box, you are in the right place
-
+ 
 ## What is in this repository?
 
 **Deep-Neural** is a mathematically rigorous, scratch-built Deep Learning framework and Automatic Differentiation (Autograd) engine.
