@@ -41,7 +41,7 @@ deep-neural/
 
 ---
 
-## 🗺️ The Game Plan
+##  The Game Plan
 
 Building a deep learning framework from scratch can seem completely overwhelming. To make this easy to digest, this documentation breaks down the repository step by step, exactly how it was built:
 
