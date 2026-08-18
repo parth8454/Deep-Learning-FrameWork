@@ -464,7 +464,7 @@ This framework is not meant to replace enterprise libraries. It is meant to be a
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 If you find a bug in the calculus, want to implement a new optimizer like RMSprop, or just want to optimize the topological sort, feel free to open a **Pull Request**. Let's make this the best scratch-built learning framework on GitHub.
 
