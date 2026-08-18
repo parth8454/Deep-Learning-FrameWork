@@ -20,7 +20,7 @@ It is capable of training multi-layer perceptrons on complex, high-dimensional d
 
 ---
 
-## 📂 Folder Structure
+##  Folder Structure
 
 Before diving into the math, here is a bird's-eye view of how the framework is organized:
 
