@@ -354,7 +354,7 @@ The MLP exposes PyTorch-style mode switches — calling `nn.train()` sets all `D
 
 ---
 
-## 🏎️ Deep Dive: The Optimizers (`optim.py`)
+## Deep Dive: The Optimizers (`optim.py`)
 
 Calculating the gradients using the Autograd engine only tells the network which **direction** it needs to move to reduce the error. The Optimizer is the engine that actually **physically moves the weights**.
 
